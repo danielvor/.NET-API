@@ -1,6 +1,30 @@
-@api_HostAddress = http://localhost:5048
+### Get All Tasks
+GET {{host}}/api/Tasks
+Content-Type: application/json
 
-GET {{api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Get Task by ID
+GET {{host}}/api/Tasks/{{taskId}}
+Content-Type: application/json
 
-###
+### Create a New Task
+POST {{host}}/api/Tasks
+Content-Type: application/json
+
+{
+  "title": "Minha Nova Tarefa",
+  "content": "Esta é uma tarefa criada via requests.http!"
+}
+
+### Update an Existing Task
+PUT {{host}}/api/Tasks/{{taskId}}
+Content-Type: application/json
+
+{
+  "title": "Tarefa Atualizada",
+  "content": "O conteúdo desta tarefa foi modificado.",
+  "id": "{{taskId}}"
+}
+
+### Delete a Task
+DELETE {{host}}/api/Tasks/{{taskId}}
+Content-Type: application/json
