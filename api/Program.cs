@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("https://danielvor.onrender.com")
+        policy.WithOrigins("https://danielvor.vercel.app")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
